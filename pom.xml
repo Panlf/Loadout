@@ -72,5 +72,18 @@
             <version>1.41.0</version>
         </dependency>
 
+        <!-- Kumo 词云核心 -->
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-core</artifactId>
+            <version>1.28</version>
+        </dependency>
+
+        <!-- 中文分词支持 -->
+        <dependency>
+            <groupId>com.kennycason</groupId>
+            <artifactId>kumo-tokenizers</artifactId>
+            <version>1.28</version>
+        </dependency>
     </dependencies>
 </project>
