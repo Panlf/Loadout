@@ -16,12 +16,13 @@ Loadout 是面向实际业务开发的 Java 工具集，旨在沉淀日常工作
 
 ## 🛠 核心功能
 ### 当前实现功能
-| 工具类                | 核心能力                            | 依赖框架/组件     |
-|-----------------------|---------------------------------|-------------|
-| `CalciteUtils`        | SQL 解析（AST）、语义校验、表名/字段/条件提取、SQL 血缘分析 | Apache Calcite |
-| `HanLpUtils`          | 中文分词、关键词提取、摘要生成、简繁转换、拼音/首字母提取、停用词过滤 | HanLP（汉语言处理包） |
-| `PinyinUtil`          | 汉字拼音转换（带声调/无声调/数字声调）、首字母/缩写生成、拼音格式化 | houbb-pinyin |
-|`WordCloudUtils`| 中文分词、自定义尺寸、颜色、字体、圆形背景、输出词云PNG图片 | kumo-core |
-
+| 工具类                | 核心能力                                    | 依赖框架/组件     |
+|-----------------------|-----------------------------------------|-------------|
+| `CalciteUtils`        | SQL 解析（AST）、语义校验、表名/字段/条件提取、SQL 血缘分析    | Apache Calcite |
+| `HanLpUtils`          | 中文分词、关键词提取、摘要生成、简繁转换、拼音/首字母提取、停用词过滤     | HanLP（汉语言处理包） |
+| `PinyinUtil`          | 汉字拼音转换（带声调/无声调/数字声调）、首字母/缩写生成、拼音格式化     | houbb-pinyin |
+|`WordCloudUtils`| 中文分词、自定义尺寸、颜色、字体、圆形背景、输出词云PNG图片         | kumo-core |
+|`JsonUtils`| 常用的序列化、反序列化、泛型支持、日期格式化、JSON 校验、格式化输出等功能 | fastjson2 |
+|`UuidUtils`| 基于 java-uuid-generator (JUG) 实现UUID生成   |java-uuid-generator|
 
 
