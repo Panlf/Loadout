@@ -1,5 +1,8 @@
 package com.loadout.algorithm.trie;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.*;
 
 /**
@@ -9,10 +12,12 @@ import java.util.*;
  */
 public class Trie {
     // 字典树节点
+    @Getter
     public static class TrieNode {
         // 子节点：使用 HashMap 保证查找效率 O(1)，打印时再排序
         private final Map<Character, TrieNode> children;
         // 是否是单词结尾
+        @Setter
         private boolean isWord;
         // 单词词频（统计这个词被添加了多少次）
         private int count;
@@ -21,22 +26,6 @@ public class Trie {
             this.children = new HashMap<>();
             this.isWord = false;
             this.count = 0;
-        }
-
-        public Map<Character, TrieNode> getChildren() {
-            return children;
-        }
-
-        public boolean isWord() {
-            return isWord;
-        }
-
-        public void setWord(boolean word) {
-            isWord = word;
-        }
-
-        public int getCount() {
-            return count;
         }
 
         public void incCount() {
@@ -82,7 +71,9 @@ public class Trie {
      * @param words 单词列表
      */
     public void addAll(String... words) {
-        if (words == null) return;
+        if (words == null) {
+            return;
+        }
         for (String w : words) {
             add(w);
         }
@@ -214,7 +205,9 @@ public class Trie {
      * @return 单词最后一个字符对应的节点，若不存在则返回 null
      */
     private TrieNode findNode(String word) {
-        if (word == null) return null;
+        if (word == null) {
+            return null;
+        }
         TrieNode node = root;
         for (char c : word.toCharArray()) {
             node = node.getChildren().get(c);
