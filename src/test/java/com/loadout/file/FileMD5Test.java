@@ -1,6 +1,8 @@
 package com.loadout.file;
 
 
+import com.loadout.file.md5.FileMD5Util;
+
 import java.io.IOException;
 
 /**
