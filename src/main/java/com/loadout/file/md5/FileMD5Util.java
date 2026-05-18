@@ -1,4 +1,4 @@
-package com.loadout.file;
+package com.loadout.file.md5;
 
 import java.io.*;
 import java.nio.file.Files;
