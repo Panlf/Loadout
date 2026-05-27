@@ -2,6 +2,7 @@ package com.loadout.http;
 
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
+import org.jetbrains.annotations.NotNull;
 
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
@@ -60,7 +61,7 @@ public class OkHttpUtils {
         return instance;
     }
 
-    public static OkHttpUtils getInstance(Config config) {
+    public static void getInstance(Config config) {
         if (instance == null) {
             synchronized (OkHttpUtils.class) {
                 if (instance == null) {
@@ -68,7 +69,6 @@ public class OkHttpUtils {
                 }
             }
         }
-        return instance;
     }
 
     // ==================== 同步 GET ====================
@@ -301,6 +301,7 @@ public class OkHttpUtils {
 
     // ==================== 日志拦截器 ====================
     private static class LoggingInterceptor implements Interceptor {
+        @NotNull
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
