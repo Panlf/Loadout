@@ -12,7 +12,23 @@ public class GithubTest {
 
     @Test
     public void testGetCommit(){
-        String json = GithubUtils.fetchCommitsAsJson("Panlf", "netty-nexus-platform");
+        String json = GithubUtils.fetchCommitsAsJsonString("Panlf", "netty-nexus-platform");
+        if (json != null) {
+            System.out.println(json);
+        }
+    }
+
+    @Test
+    public void testGetReadme(){
+        String json = GithubUtils.fetchReadmeText("Panlf", "netty-nexus-platform");
+        if (json != null) {
+            System.out.println(json);
+        }
+    }
+
+    @Test
+    public void testGetStar(){
+        String json = GithubUtils.fetchUserStarsAsJsonString("Panlf");
         if (json != null) {
             System.out.println(json);
         }
