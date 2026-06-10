@@ -244,13 +244,13 @@ public class OkHttpUtils {
     private void executeAsync(Request request, Callback callback) {
         client.newCall(request).enqueue(new okhttp3.Callback() {
             @Override
-            public void onFailure(okhttp3.Call call, IOException e) {
+            public void onFailure(@NotNull okhttp3.Call call, IOException e) {
                 log.error("Async request failed, url: {}", request.url(), e);
                 callback.onFailure(e);
             }
 
             @Override
-            public void onResponse(okhttp3.Call call, Response response) throws IOException {
+            public void onResponse(@NotNull okhttp3.Call call, @NotNull Response response) throws IOException {
                 try {
                     if (!response.isSuccessful()) {
                         log.error("Async request unsuccessful, url: {}, code: {}", request.url(), response.code());
